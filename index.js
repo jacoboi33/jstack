@@ -7,7 +7,7 @@ app.get('/', function(req, res) {
 });
 
 server.on('request', app);
-server.listen(3001, function() {
+server.listen(3000, function() {
     console.log('Express server listening on port ' + server.address().port);
 });
 
