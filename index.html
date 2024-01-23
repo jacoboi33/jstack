@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websockets</title>
+</head>
+<body>
+    <h1>WebSockets</h1>
+</body>
+
+<script>
+    let ws;
+    const proto = window.location.protocol === "https:" ? "wss" : "ws";
+    ws = new WebSocket(`${proto}://${window.location.host}`);
+    ws.onmessage = (event) => { console.log(event.data) };
+    // let ws = new WebSocket("ws://localhost:8080");
+    // ws.onopen = function() {
+    //     ws.send("Hello, world");
+    // };
+    // ws.onmessage = function (evt) {
+    //     alert(evt.data);
+    // };
+</script>
+</html>
